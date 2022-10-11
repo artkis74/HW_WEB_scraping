@@ -36,9 +36,8 @@ def get_info():
                 count += 1
                 article = soup.find(class_="tm-article-snippet__title tm-article-snippet__title_h1").text
                 date = soup.find(class_="tm-article-snippet__datetime-published").find("time").attrs["title"]
-                print(f'{count}. Название статьи - "{article}", '
-                      f'ссылка - {link}, дата - {date}, '
-                      f' содержит слово - {word}')
+                print(f'{count}. Дата - {date}, название статьи - {article}, '
+                      f'ссылка - {link}, содержит слово - {word}.')
 
 
 if __name__ == '__main__':
